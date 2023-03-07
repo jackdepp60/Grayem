@@ -14,17 +14,17 @@ body {
 
 .hamburger i {
     font-size: 2rem;
-    color: white;
+    color: #8f9ffc;
     cursor: pointer;
 }
 
 .hamburger i:hover {
-    color: #d760e2;
+    color: #9cb4f5;
     transition: .2s ease-in;
 }
 
 .hamburger i:active {
-    color: #e4b0e9; 
+    color: #ffffff;
 }
 
 .top-contact {
@@ -186,7 +186,7 @@ span {
     background: transparent;
     min-width: 8%;
     position: relative;
-    bottom: 5px;
+    bottom: 0;
     padding: 15px 35px;
     text-align: center;
     font-size: 18px;
@@ -208,8 +208,9 @@ span {
 
 
 .btn:active {
-    box-shadow: inset 0px 1px 1px 30px #7b9ce9;
+    /* box-shadow: inset 0px 1px 1px 30px #7b9ce9; */
     color: #000000;
+    
     /* transition: .2s; */
     
 }
@@ -971,10 +972,11 @@ h1.right-content {
         text-align: center;
 }
     .btn {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
   .top-nav {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -988,6 +990,7 @@ h1.right-content {
 }
  
   .top-nav.toggle {
+    opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1020,9 +1023,6 @@ h1.right-content {
     left: 30px;
     top: 30px;
     z-index: 999;
-    /* justify-content: end;
-    align-items: end;
-    position: static; */
   }
 
   .hamburger i {
@@ -1042,8 +1042,8 @@ h1.right-content {
   .top-intro {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
-
   .right-slogan::before {
     content: "";
     width: 90px;
@@ -1056,11 +1056,18 @@ h1.right-content {
     color: rgba(255, 255, 255, 0.651);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
+    position: relative;
     display: flex;
+    bottom: 50px;
+    left: 20px;
+    min-width: 100%;
 }
 
 h1.right-content {
+    position: relative;
+    bottom: 100px;
+    right: 420px;
     color: white;
     width: 700px;
     font-weight: 700;
@@ -1071,16 +1078,37 @@ h1.right-content {
 }
 
 .left-content {
+    position: relative;
+    bottom: 100px;
+    left: 80px;
     display: flex;
     justify-content: center;
     z-index: 3;
 }
 
 .left-img {
-    width: 350px;
+    max-width: 60%;
 }
 
 .container {
     overflow: hidden;
+}
+
+.slogan-icon {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 200px);
+    padding: 0 20%;
+    margin-bottom: -100px;
+}
+
+#portfolio {
+    grid-template-columns: 1fr;
+}
+.portfolio2 {
+    text-align: center;
+}
+img .string1 {
+    float: right;
+    width: 10%;
 }
 }
