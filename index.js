@@ -1,16 +1,18 @@
-// HAMBURGER MENU
+
 
 let toggleBtn = document.querySelector(".hamburger");
 let topContact = document.querySelector(".top-contact");
-let topNav = document.querySelector(".top-nav");
+let topNavUl = document.querySelector(".top-nav");
 let upArrow = document.querySelector(".scroll-arrow");
 
 
 
+// HAMBURGER MENU
 toggleBtn.addEventListener("click", function(){
-    topNav.classList.toggle("toggle");
+  let navItem = document.querySelector(".nav-item");
+    topNavUl.classList.toggle("toggle");
     // topContact.style.background = "none";
-    console.log("test");
+    // console.log("test");
 })
 
 
@@ -35,8 +37,6 @@ const hiddenElements = document.querySelectorAll(".slogan-icon");
   hiddenElements.forEach((element) => {
     observer.observe(element);
   })
-
-// END OF HAMBURGER MENU
 
 // SLOGAN ICONS ENTRY ANIMATION
 // const mySection = document.querySelector('.slogan-icon');
@@ -68,12 +68,13 @@ const hiddenElements = document.querySelectorAll(".slogan-icon");
 window.addEventListener('scroll', function() {
   let scrollItems = document.querySelectorAll("a");
   let btn = document.querySelector(".btn");
+  let topNav = document.querySelector(".top-nav");
 
   for(var i = 0; i < scrollItems.length; i++){
     scrollItems[i].classList.toggle('scrollItems', window.scrollY > 0);
   }
   btn.classList.toggle("scroll", window.scrollY > 0);
-  topNav.classList.toggle('scroll', window.scrollY > 0);
+  topNav.classList.toggle("scroll", window.scrollY > 0);
 });
 
 // SCROLL END
