@@ -1079,7 +1079,7 @@ span {
     bottom: 0;
     color: white;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif;
     z-index: 2;
     margin: 0 auto;
@@ -1142,6 +1142,11 @@ span {
     text-align: justify;
     padding: 0 5%;
 }
+
+.btn-portfolio {
+    width: 30%;
+    height: 40px;
+}
 .string1 {
     display: none;
 }
@@ -1151,7 +1156,7 @@ span {
 }
 
 .container.card-show {
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
 }
 
 .item1 {
