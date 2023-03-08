@@ -11,7 +11,7 @@ let upArrow = document.querySelector(".scroll-arrow");
 toggleBtn.addEventListener("click", function(){
   let navItem = document.querySelector(".nav-item");
   let moveRight = document.querySelector(".intro1 img");
-  let intro2Move = document.querySelector(".intro2 h1");
+  let intro2Move = document.querySelector(".intro2");
   moveRight.classList.toggle("moveRight");
   intro2Move.classList.toggle("intro2Move");
     topNavUl.classList.toggle("toggle");

@@ -292,16 +292,6 @@ span {
 }
 
 
-.top-intro {
-    margin-top: 200px;
-    display: grid;
-    grid-template-columns: 50px 50px 50px 100px 300px 500px 200px;
-    grid-template-rows: 100px 100px 100px;
-    place-content: center;
-    z-index: 6;
-
-}
-
 .abstract {
     width: 1600px;
     height: 600px;
@@ -381,7 +371,7 @@ span {
 } */
 
 
-.top-intro .slogan{
+/* .top-intro .slogan{
     color: rgba(255, 255, 255, 0.651);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -391,19 +381,43 @@ span {
     display: flex;
     align-items: center;
     margin-left: 90px;
+} */
+
+
+
+
+.top-intro {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    z-index: 6;
+
 }
 
-.top-intro h1 {
+.intro1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro2 {
+    position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.intro2 h1 {
     color: white;
-    width: 700px;
     font-weight: 700;
     font-size: 70px;
     font-family: 'Montserrat', sans-serif;
-    grid-column: 5/7;
-    grid-row: 1;
     text-align: center;
-    margin-left: 350px;
-    z-index: 2;
+   
 }
 
 .top-intro img {
@@ -847,7 +861,7 @@ span {
     align-items: center;
     justify-content: center;
     position: fixed;
-    right: 50px;
+    right: 25px;
     overflow: hidden;
     z-index: 999;
     animation: scrollArrow .8s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
@@ -1037,61 +1051,65 @@ span {
   .intro1 img.moveRight {
     filter: blur(4px);
     right: 0;
-    bottom: 175px;
+    /* bottom: 120px; */
     transition: bottom .8s ease-in-out, right .4s, filter .6s ease;
   }
 
-  .intro2 h1.intro2Move {
+  .intro2.intro2Move {
     font-size: 6rem;
     bottom: 100px;
     animation: blurIntro2 .5s ease forwards;
-    transition: all .6s;
+    transition: filter 100s, bottom .8s ease;
   }
 
   @keyframes blurIntro2 {
     0% {
         filter: blur(5px);
-        transition: filter .6s ease;
+        
     }
     50% {
         filter: blur(5px);
-          transition: filter .6s ease;
+        
     }
     100% {
         filter: blur(0);
-        transition: filter .6s ease;
+    
   }
 }
   .intro1 {
+    filter: blur(0);
     position: relative;
-    left: 50px;
-    text-align: center;
-    grid-row: 1 / 2; /* position in the first row */
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 2;
+    z-index: 2;
   }
   
   .intro2 {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-row: 2 / 3;
+    transition: filter 30s, bottom .6s ease, font-size .6s;
   }
   
   .intro2 h1 {
-    position: relative;
-    filter: blur(0);
-    bottom: 0;
+    
     color: white;
     font-weight: 800;
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Montserrat', sans-serif;
-    z-index: 2;
     margin: 0 auto;
-    transition: filter .6s, bottom .6s ease, font-size .6s;
+    transition: filter 3s, bottom .6s ease, font-size .6s;
   }
   
   .intro1 img {
-    position: relative;
-    bottom: 90px;
     filter: blur(0);
-    max-width: 60%;
-    right: 40px;
+    max-width: 70%;
     transition: bottom .8s ease-out, right .4s, filter .6s ease;
 }
 
@@ -1155,10 +1173,6 @@ span {
     top: 0;
 }
 
-.container.card-show {
-    /* grid-template-rows: repeat(2, 1fr); */
-}
-
 .item1 {
     place-self: center;
     grid-column: 1/6;
@@ -1196,6 +1210,23 @@ span {
     margin: 12px 0;
     padding: 0;
   }
+
+
+  .card:active {
+    bottom: 40px;
+    box-shadow: 0 2px 15px 0px rgba(255, 255, 255, 0.452);
+  }
+
+  .card:active > .card-body{
+    background: rgb(53, 56, 71);
+
+  }
+
+  .card:active > .card-img{
+    transform: scale(1.07);
+  }
+
+
 
   #content {
     /* border: 2px solid red; */
