@@ -10,6 +10,10 @@ let upArrow = document.querySelector(".scroll-arrow");
 // HAMBURGER MENU
 toggleBtn.addEventListener("click", function(){
   let navItem = document.querySelector(".nav-item");
+  let moveRight = document.querySelector(".intro1 img");
+  let intro2Move = document.querySelector(".intro2 h1");
+  moveRight.classList.toggle("moveRight");
+  intro2Move.classList.toggle("intro2Move");
     topNavUl.classList.toggle("toggle");
     // topContact.style.background = "none";
     // console.log("test");
@@ -74,6 +78,7 @@ window.addEventListener('scroll', function() {
     scrollItems[i].classList.toggle('scrollItems', window.scrollY > 0);
   }
   btn.classList.toggle("scroll", window.scrollY > 0);
+  topNav.classList.toggle("mobileScroll", window.scrollY >0);
   topNav.classList.toggle("scroll", window.scrollY > 0);
 });
 
