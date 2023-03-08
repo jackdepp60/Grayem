@@ -965,6 +965,7 @@ span {
     transition: visibility 1s;
   }
 
+
     .nav-item {
         position: static;
         margin: 10px 30px;
@@ -1101,7 +1102,7 @@ span {
     
     color: white;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 45px;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     transition: filter 3s, bottom .6s ease, font-size .6s;
@@ -1109,7 +1110,7 @@ span {
   
   .intro1 img {
     filter: blur(0);
-    max-width: 70%;
+    max-width: 85%;
     transition: bottom .8s ease-out, right .4s, filter .6s ease;
 }
 
