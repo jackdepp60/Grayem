@@ -1163,19 +1163,19 @@ span {
     padding: 0;
   }
 
-  .card-body:focus {
+  .card-body:active {
     background: rgb(53, 56, 71);
     border-bottom-left-radius: 100px;
     transition: all .3s;
   }
 
-  .card:focus > .card-body{
+  .card:active > .card-body{
     background: rgb(53, 56, 71);
     border-bottom-left-radius: 100px;
     transition: all .3s;
   }
 
-  .card:focus > .card-img{
+  .card:active > .card-img{
     transform: scale(1.07);
   }
 
