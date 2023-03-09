@@ -12,6 +12,9 @@ toggleBtn.addEventListener("click", function(){
   let navItem = document.querySelector(".nav-item");
   let moveRight = document.querySelector(".intro1 img");
   let intro2Move = document.querySelector(".intro2");
+
+
+
   moveRight.classList.toggle("moveRight");
   intro2Move.classList.toggle("intro2Move");
     topNavUl.classList.toggle("toggle");
@@ -73,10 +76,13 @@ window.addEventListener('scroll', function() {
   let scrollItems = document.querySelectorAll("a");
   let btn = document.querySelector(".btn");
   let topNav = document.querySelector(".top-nav");
-
+  let logo = document.querySelector(".logo");
+  // let logoAfter = window.getComputedStyle(logo, "::after");
+ 
   for(var i = 0; i < scrollItems.length; i++){
     scrollItems[i].classList.toggle('scrollItems', window.scrollY > 0);
   }
+  logo.classList.toggle("scroll", window.scrollY > 0);
   btn.classList.toggle("scroll", window.scrollY > 0);
   topNav.classList.toggle("mobileScroll", window.scrollY >0);
   topNav.classList.toggle("scroll", window.scrollY > 0);
