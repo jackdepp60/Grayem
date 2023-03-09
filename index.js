@@ -4,14 +4,23 @@ let toggleBtn = document.querySelector(".hamburger");
 let topContact = document.querySelector(".top-contact");
 let topNavUl = document.querySelector(".top-nav");
 let upArrow = document.querySelector(".scroll-arrow");
-let cardClick = document.querySelector(".card-body");
+let cardClick = document.querySelectorAll(".card-body");
 
 // CARD CLICK
 
-cardClick.addEventListener("touchstart", function(){
-  cardClick.classList.toggle("cardClick");
-  console.log("click");
+cardClick.forEach((card)=>{
+  card.addEventListener("touchstart", ()=>{
+    card.classList.toggle("cardClick");
+    console.log("click")
+  })
 })
+
+// cardClick.addEventListener("click", function(){
+ 
+//     cardClick.classList.add("cardClick");
+//     console.log("click");
+  
+// })
 
 
 

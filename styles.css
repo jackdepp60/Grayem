@@ -1179,7 +1179,7 @@ span {
     transform: scale(1.07);
   }
 
-  .cardClick {
+  .card-body.cardClick {
     background: rgb(53, 56, 71);
     border-bottom-left-radius: 100px;
     transition: all .3s;
