@@ -123,8 +123,8 @@ span {
     top: 0;
     z-index: 999;
     margin: 0 0;
-    transition: all .4s ease-in;
-    /* overflow: hidden; */
+    transition: all .4s ease;
+    overflow: hidden;
     
 }
 
@@ -140,7 +140,11 @@ span {
 .top-nav.scroll {
     background: rgb(255, 255, 255);
     box-shadow: 0 0 20px 0 rgba(128, 128, 128, 0.527);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
     position: sticky;
+    height: 80px;
     z-index: 999;
     top: 0;
 }
@@ -156,6 +160,8 @@ span {
 }
 .scrollItems {
     color: rgb(0, 0, 0) !important;
+    position: relative;
+    bottom: 4px;
 }
 
 
@@ -173,11 +179,19 @@ span {
 
 .nav-item a:hover {
     border-color: #4671ff;
+    color: #859dec;
+    transition: .5s ease;
     
 }
 
 .btn.scroll {
     color: rgb(0, 0, 0);
+    height: 50px;
+    position: relative;
+    bottom: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -207,47 +221,11 @@ span {
 
 
 .btn:active {
-    /* box-shadow: inset 0px 1px 1px 30px #7b9ce9; */
     color: #000000;
-    
-    /* transition: .2s; */
     
 }
 
-
-
-
-/* .search-bar {
-    position: relative;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    width: 400px;
-    justify-content: flex-end;
-    }
-    
-    .search {
-    width: 180px;
-    height: 35px;
-    border-radius: 2px;
-    border: none;
-    outline: none;
-    font-size: 1.1rem;
-    color: rgb(114, 150, 142);
-    font-weight: lighter;
-    transition: .15s ease-out;
-} */
-
-
-/* .container {
-    position: relative;
-    top: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* specify the width of the container */
-    
-
+   
 
 .search:focus {
     outline: 4px solid rgba(190, 240, 240, 0.356);
@@ -359,37 +337,13 @@ span {
 }
 
 
-/* .art4 {
-    width: 420px;
-    background-color: transparent;
-    border-bottom: 15px solid #BC38C9;
-    transform: rotate(45deg);
-    position: relative;
-    bottom: 290px;
-    left: 920px;
-} */
-
-
-/* .top-intro .slogan{
-    color: rgba(255, 255, 255, 0.651);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    grid-row: 1/2;
-    grid-column: 6/7;
-    display: flex;
-    align-items: center;
-    margin-left: 90px;
-} */
-
-
-
-
 .top-intro {
     margin-top: 150px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 700px);
+    grid-template-rows: auto;
+    place-items: center;
+    place-content: center;
     z-index: 6;
 
 }
@@ -410,7 +364,22 @@ span {
     z-index: 2;
 }
 
+.intro2 h1::before {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "Design | Develop | Conquer";
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+}
+
 .intro2 h1 {
+    position: relative;
     color: white;
     font-weight: 700;
     font-size: 70px;
@@ -444,16 +413,17 @@ span {
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
     transform: translateY(100px);
     text-align: center;
-    padding: 8% 18%;
-    
+    padding: 5% 14%;  
 }
 
 .slogan-text {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.5px;
     line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .icons p {
@@ -461,6 +431,7 @@ span {
     color: rgb(61, 61, 61);
     font-weight: 300;
     line-height: 1.6;
+    text-align: center;
 }
 
 
@@ -469,7 +440,7 @@ span {
   
   #portfolio {
     position: relative;
-    top: 100px;
+    top: 0;
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr;
@@ -571,7 +542,7 @@ span {
     background: #161A23;
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 0;
     z-index: 888;
   }
 
@@ -620,11 +591,7 @@ span {
 
   .card-body {
     background: rgb(39, 42, 56);
-    /* width: 330px; */
     height: 360px;
-    /* margin: 0 0; */
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -975,6 +942,7 @@ span {
     z-index: 1;
     background-color: transparent;
     transition: all 1s;
+    overflow: visible;
 }
  
   .top-nav.toggle {
@@ -1095,6 +1063,11 @@ span {
     transition: filter 3s, bottom .6s ease, font-size .6s;
   }
   
+  .intro2 h1::before {
+    font-size: 17px;
+    width: 100%;
+    bottom: 60px;
+  }
   .intro1 img {
     filter: blur(0);
     max-width: 85%;
@@ -1122,10 +1095,15 @@ span {
 
 .slogan-icon {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 200px);
-    padding: 0 20%;
-    margin-bottom: -100px;
+    grid-gap: 0;
+    grid-template-rows: repeat(3, auto);
+    padding: 5% 20% 15% 20%;
+    margin-top: -20px;
 }
+
+/* .icons p {
+    text-align:justify ;
+} */
 
 #portfolio {
     grid-template-columns: 1fr;
@@ -1161,24 +1139,17 @@ span {
     top: 0;
 }
 
-.item1 {
-    place-self: center;
-    grid-column: 1/6;
+
+.card {
+    margin: 20px 20px;
+    width: 90%;
+    position: static;
 }
 
-.item2 {
-   
-    place-self: center;
-    grid-column: 1/6;
-    grid-row: 2/3;
-}
-
-.item3 {
-   
-    place-self: center;
-    grid-column: 1/6;
-    grid-row: 3/4;
-}
+.card:hover {
+    border-bottom-left-radius: 180px;
+    transition: .5s;
+} 
 
 .card-img {
     width: 100%;
@@ -1190,19 +1161,16 @@ span {
     width: auto;
     margin: 0 auto;
 }
-.card {
-    margin: 20px 20px;
-    width: 90%;
-    position: static;
-}
+
 .card-body ul {
     margin: 12px 0;
     padding: 0;
   }
 
 
-  .card:active {
+  .card:focus {
     bottom: 40px;
+    border-bottom-left-radius: 150px;
     box-shadow: 0 2px 15px 0px rgba(255, 255, 255, 0.452);
   }
 
@@ -1218,12 +1186,11 @@ span {
 
 
   #content {
-    /* border: 2px solid red; */
     height: auto;
     background: #161A23;
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 0;
     z-index: 888;
   }
 
