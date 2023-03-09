@@ -4,6 +4,14 @@ let toggleBtn = document.querySelector(".hamburger");
 let topContact = document.querySelector(".top-contact");
 let topNavUl = document.querySelector(".top-nav");
 let upArrow = document.querySelector(".scroll-arrow");
+let cardClick = document.querySelector(".card-body");
+
+// CARD CLICK
+
+cardClick.addEventListener("touchstart", function(){
+  cardClick.classList.toggle("cardClick");
+  console.log("click");
+})
 
 
 
@@ -21,7 +29,6 @@ toggleBtn.addEventListener("click", function(){
     // topContact.style.background = "none";
     // console.log("test");
 })
-
 
 
 // SLOGAN-ICONS OBSERVER
