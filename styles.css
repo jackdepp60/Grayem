@@ -1146,10 +1146,10 @@ span {
     position: static;
 }
 
-.card:hover {
+/* .card:hover {
     border-bottom-left-radius: 180px;
     transition: .5s;
-} 
+}  */
 
 .card-img {
     width: 100%;
@@ -1168,15 +1168,16 @@ span {
   }
 
 
-  .card:focus {
+  /* .card:active {
     bottom: 40px;
     border-bottom-left-radius: 150px;
     box-shadow: 0 2px 15px 0px rgba(255, 255, 255, 0.452);
-  }
+  } */
 
   .card:active > .card-body{
     background: rgb(53, 56, 71);
-
+    border-bottom-left-radius: 100px;
+    transition: all .3s;
   }
 
   .card:active > .card-img{
