@@ -979,7 +979,7 @@ span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    top: -280px;
+    top: -180px;
     left: 0;
     z-index: 1;
     background-color: transparent;
@@ -1035,7 +1035,7 @@ span {
     transition: .3s;
   }
 
-  .hamburger i:active {
+  .hamburger i:focus {
     color:rgb(255, 196, 107)
   }
 
