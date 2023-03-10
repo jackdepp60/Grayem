@@ -1038,12 +1038,12 @@ span {
   }
 
   .hamburger i:hover {
-    color: rgb(214, 149, 51);
+    color: rgb(221, 221, 221);
     transition: .3s;
   }
 
   .hamburger i:focus {
-    color:rgb(255, 196, 107)
+    color:rgb(223, 223, 223)
   }
 
   
@@ -1051,8 +1051,8 @@ span {
     position: relative;
     bottom: 180px;
     height: 100vh;
-    background-size: 300%;
-    animation: headerBG 1.5s ease-in-out infinite alternate;
+    background-size: 350%;
+    animation: headerBG 4s ease-in-out infinite alternate;
   /* overflow: hidden; */
     
 }
@@ -1147,14 +1147,24 @@ span {
     font-size: 17px;
     width: 100%;
     bottom: 60px;
+    color:#ebf0ee;
+    font-weight: 500;
   }
   .intro1 img {
     filter: blur(0);
     max-width: 75%;
     transition: bottom .8s ease-out, right .4s, filter .6s ease;
 }
-
-
+.btn {
+   border-radius: 30px;
+   border-color: #21b2cc !important;
+}
+.btn:hover {
+    box-shadow: inset 0px 1px 1px 30px #21b2cc;
+}
+.btn:focus {
+    box-shadow: inset 0px 1px 1px 30px #21b2cc;
+}
 /* .left-slogan {
     display: flex; 
     justify-content: center; 
