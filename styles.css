@@ -61,8 +61,9 @@ span {
 .header {
     position: relative;
     background-size: 180%;
-    animation: headerBG 3s ease-out infinite alternate;
-    height: 100vh;
+    animation: headerBG 2s ease-out infinite alternate;
+    height: 70vh;
+    
     overflow: hidden;
     
 }
@@ -77,6 +78,7 @@ span {
         background-position: top right; 
     }
 }
+
 
 /* .header:hover {
     background-position: top left;
@@ -338,7 +340,7 @@ span {
 
 
 .top-intro {
-    margin-top: 150px;
+    margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 700px);
     grid-template-rows: auto;
@@ -348,8 +350,33 @@ span {
 
 }
 
+.custom-shape-divider-bottom-1678401634 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678401634 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1678401634 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
 .intro1 {
     position: relative;
+    top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +384,7 @@ span {
 
 .intro2 {
     position: relative;
-    position: relative;
+    top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -372,6 +399,7 @@ span {
     left: 50%;
     transform: translateX(-50%);
     content: "Design | Develop | Conquer";
+    color: rgb(255, 165, 105);
     font-size: 20px;
     font-weight: 100;
     font-family: "Roboto", sans-serif;
@@ -987,9 +1015,16 @@ span {
     font-size: 2.8rem;
   }
 
-  .header {
-    bottom: 90px;   
-  }
+  
+.header {
+    position: relative;
+    bottom: 90px;
+    height: 80vh;
+    background-size: 300%;
+    animation: headerBG 1.5s ease-in-out infinite alternate;
+  /* overflow: hidden; */
+    
+}
 
   .logo {
     display: none;
@@ -1000,6 +1035,7 @@ span {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr; /* specify two rows with equal height */
+    grid-gap: -20px;
     place-content: center;
     justify-content: center;
   }
@@ -1007,15 +1043,13 @@ span {
   .intro1 img.moveRight {
     filter: blur(4px);
     right: 0;
-    /* bottom: 120px; */
-    transition: bottom .8s ease-in-out, right .4s, filter .6s ease;
+    transition: filter .6s ease;
   }
 
   .intro2.intro2Move {
     font-size: 6rem;
-    bottom: 100px;
-    animation: blurIntro2 .5s ease forwards;
-    transition: filter 100s, bottom .8s ease;
+    animation: blurIntro2 .8s ease forwards;
+    transition: filter 100s;
   }
 
   @keyframes blurIntro2 {
@@ -1032,10 +1066,24 @@ span {
     
   }
 }
+
+.custom-shape-divider-bottom-1678401634 {
+    width: 110%;
+}
+
+.custom-shape-divider-bottom-1678401634 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+    transform: rotateY(180deg);
+}
+
+
   .intro1 {
     filter: blur(0);
     position: relative;
-    bottom: 50px;
+    bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1045,7 +1093,7 @@ span {
   
   .intro2 {
     position: relative;
-    bottom: 0;
+    bottom: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1070,7 +1118,7 @@ span {
   }
   .intro1 img {
     filter: blur(0);
-    max-width: 85%;
+    max-width: 75%;
     transition: bottom .8s ease-out, right .4s, filter .6s ease;
 }
 

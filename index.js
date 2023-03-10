@@ -5,6 +5,21 @@ let topContact = document.querySelector(".top-contact");
 let topNavUl = document.querySelector(".top-nav");
 let upArrow = document.querySelector(".scroll-arrow");
 let cardClick = document.querySelectorAll(".card-body");
+const media = window.matchMedia('(max-width: 700px)');
+
+
+// DISABLE TOP NAV SCROLL IN MOBILE
+
+function handleMediaChange(e) {
+  if (e.matches) {
+    topNavUl.classList.remove('scroll');
+  } else {
+    topNavUl.classList.add('scroll');
+  }
+}
+
+media.addEventListener('change', handleMediaChange);
+
 
 // CARD CLICK
 
