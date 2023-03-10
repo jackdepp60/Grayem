@@ -61,20 +61,20 @@ span {
 .header {
     position: relative;
     background-size: 180%;
+    bottom: 90px;
     animation: headerBG 2s ease-out infinite alternate;
-    height: 70vh;
-    
+    height: 90vh;
     overflow: hidden;
     
 }
 
 @keyframes headerBG {
     from{
-        background-image: linear-gradient(5deg,#5379d1 5%, #161A23 60%);
+        background-image: linear-gradient(145deg,#f55c70 10%, #f7b155 65%, #f7a04f 90%);
         background-position: top left;
     }
     to{
-        background-image: linear-gradient(5deg,#5379d1 5%, #161A23 60%);
+        background-image: linear-gradient(145deg,#f55c70 10%, #f7b155 65%, #f7a04f 90%);
         background-position: top right; 
     }
 }
@@ -116,7 +116,7 @@ span {
 }
 
 .top-nav {
-    background:  #161A23;
+    background:  transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,13 +249,14 @@ span {
 
 .round1 {
     position: relative;
-    bottom: 90px;
-    right: 1040px;
-    width: 500px;
-    height: 500px;
-    border-radius: 30px;
-    background-color: #f1ebf10a;
+    bottom: 280px;
+    left: 390px;
+    width: 20%;
+    height: 55%;
+    border-radius: 50px;
+    background-color: #f1ebf11c;
     animation: round1 60s linear infinite;
+    z-index: 1;
 }
 
 
@@ -376,15 +377,16 @@ span {
 
 .intro1 {
     position: relative;
-    top: 70px;
+    top: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 12;
 }
 
 .intro2 {
     position: relative;
-    top: 30px;
+    top: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,7 +401,7 @@ span {
     left: 50%;
     transform: translateX(-50%);
     content: "Design | Develop | Conquer";
-    color: rgb(255, 165, 105);
+    color: rgb(91, 37, 112);
     font-size: 20px;
     font-weight: 100;
     font-family: "Roboto", sans-serif;
@@ -437,6 +439,7 @@ span {
 
 /* SLOGAN ICONS */
 .slogan-icon {
+    margin-top: -30px;
     opacity: 0;
     display: grid;
     place-content: center;
@@ -947,6 +950,10 @@ span {
     transition: visibility 1s;
   }
 
+  .nav-item a:hover {
+    color: rgb(231, 230, 230);
+    border-color: rgb(255, 226, 61);
+  }
 
     .nav-item {
         position: static;
@@ -954,7 +961,9 @@ span {
         text-align: center;
 }
     .nav-item a {
-        text-shadow: 0 1px 3px rgb(0, 0, 0);
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        /* text-shadow: 0 1px 3px rgb(0, 0, 0); */
     }
 
     .btn {
@@ -962,11 +971,12 @@ span {
     }
 
   .top-nav {
+    background: transparent;
     opacity: 0;
     background: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     text-align: center;
     top: -280px;
@@ -981,11 +991,11 @@ span {
     opacity: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 555;
-    top: 100px;
+    top: 140px;
     transition: all .5s ease;
 }
 
@@ -998,32 +1008,42 @@ span {
     display: flex;
     margin: 0 0;
     padding: 10px 0;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     /* height: 60px; */
     z-index: 555;
-    background: #161A23;
+    background: transparent;
     /* overflow-Y: hidden; */
   }
 
   .hamburger {
     display: block;
     position: relative;
-    left: 30px;
+    /* left: 30px; */
     top: 30px;
     z-index: 999;
   }
 
   .hamburger i {
     display: block;
-    font-size: 2.8rem;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+
+  .hamburger i:hover {
+    color: rgb(214, 149, 51);
+    transition: .3s;
+  }
+
+  .hamburger i:active {
+    color:rgb(255, 196, 107)
   }
 
   
 .header {
     position: relative;
-    bottom: 120px;
-    height: 80vh;
+    bottom: 180px;
+    height: 90vh;
     background-size: 300%;
     animation: headerBG 1.5s ease-in-out infinite alternate;
   /* overflow: hidden; */
@@ -1039,8 +1059,8 @@ span {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; /* specify two rows with equal height */
-    grid-gap: -20px;
+    grid-template-rows: auto; /* specify two rows with equal height */
+    grid-gap: 80px;
     place-content: center;
     justify-content: center;
     top: 20px;
@@ -1099,7 +1119,6 @@ span {
   
   .intro2 {
     position: relative;
-    bottom: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1152,7 +1171,7 @@ span {
     grid-gap: 0;
     grid-template-rows: repeat(3, auto);
     padding: 5% 20% 15% 20%;
-    margin-top: -20px;
+    margin-top: -100px;
 }
 
 /* .icons p {
