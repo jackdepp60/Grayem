@@ -941,7 +941,14 @@ span {
 
 
 /* Mobile Styles */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+
+    .round1 {
+        width: 70%;
+        height: 50%;
+        left: 70px;
+    }
+
   .top-nav.mobileScroll {
     visibility: hidden;
     position: static;
@@ -1043,7 +1050,7 @@ span {
 .header {
     position: relative;
     bottom: 180px;
-    height: 90vh;
+    height: 100vh;
     background-size: 300%;
     animation: headerBG 1.5s ease-in-out infinite alternate;
   /* overflow: hidden; */
