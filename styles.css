@@ -953,6 +953,10 @@ span {
         margin: 10px 30px;
         text-align: center;
 }
+    .nav-item a {
+        text-shadow: 2px 2px rgb(29, 20, 39);
+    }
+
     .btn {
         margin-top: 10px;
     }
