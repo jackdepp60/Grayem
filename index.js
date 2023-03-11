@@ -5,10 +5,44 @@ let topContact = document.querySelector(".top-contact");
 let topNavUl = document.querySelector(".top-nav");
 let upArrow = document.querySelector(".scroll-arrow");
 let cardClick = document.querySelectorAll(".card-body");
+const header = document.querySelector('.header');
+const round1 = document.querySelector(".round1");
+var intro2 = document.querySelector('.intro2 h1');
+let testBtn = document.querySelector(".btn");
 const media = window.matchMedia('(max-width: 700px)');
 
+// testBtn.addEventListener("click", ()=>{
+//   var myH1 = document.querySelector('.intro2 h1');
+//   var sheet = document.styleSheets[0];
+//   var rule = '.intro2 h1::before { color: white; }';
+//   sheet.insertRule(rule, sheet.cssRules.length);
+//   console.log("button")
+// })
 
-// DISABLE TOP NAV SCROLL IN MOBILE
+
+// DARK MODE
+
+const darkMode = document.querySelector(".dark-mode");
+const lightMode = document.querySelector(".light-mode");
+
+lightMode.addEventListener("click", ()=>{
+  lightMode.classList.toggle("lightsOff"); 
+    darkMode.classList.toggle("lightsOn"); 
+    header.style.animationName = "darkBG";
+    round1.style.opacity = "0.7";
+    intro2.style.color = "rgb(69, 69, 102)"; 
+})
+
+darkMode.addEventListener("click", ()=>{
+  lightMode.classList.toggle("lightsOff"); 
+  darkMode.classList.toggle("lightsOn");
+  header.style.animationName = "headerBG";
+  header.style.animationDuration = "20s";
+  header.style.backgroundSize = "500%";
+  round1.style.opacity = "0.2";
+  round1.style.backgroundColor = "#fffeff21";
+  intro2.style.color = "white"; 
+})
 
 
 // CARD CLICK

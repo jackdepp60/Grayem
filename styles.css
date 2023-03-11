@@ -58,17 +58,66 @@ span {
 
 /* HEADER */
 
+  .night-mode {
+    position: relative;
+    top: 500px;
+    left: 50px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(79, 107, 230, 0.486);
+  }
+.light-mode {
+  position: absolute;
+  right: 300px;
+  opacity: 0;
+}
+
+.dark-mode {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s;
+ 
+}
+
+
+
+
+.dark-mode i, .light-mode i{
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+
+}
+
+.lightsOn {
+  right: 300px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.lightsOff{
+  right: 50%;
+  opacity: 1;
+  transform: translateX(50%);
+  transition: opacity 1s;
+}
+
+
+
 .header {
     position: relative;
     background-size: 180%;
     bottom: 90px;
-    animation: headerBG 1.6s ease-out infinite alternate;
+    animation: darkBG 1.6s ease-out infinite alternate;
     height: 90vh;
     overflow: hidden;
     
 }
 
-@keyframes headerBG {
+@keyframes darkBG {
     from{
         background-image: linear-gradient(145deg,#f55c70 10%, #f7b155 65%, #f7a04f 90%);
         background-position: top left;
@@ -78,6 +127,18 @@ span {
         background-position: top right; 
     }
 }
+
+@keyframes headerBG {
+  from {
+    background-image: linear-gradient(5deg,#5379d1 5%, #161A23 60%);;
+    background-position: top left;
+  }
+  to {
+    background-image: linear-gradient(5deg,#5379d1 5%, #161A23 60%);;
+    background-position: top right; 
+  }
+}
+
 
 
 /* .header:hover {
@@ -254,7 +315,7 @@ span {
     width: 20%;
     height: 55%;
     border-radius: 50px;
-    background-color: #f1ebf11c;
+    background-color: #f1ebf121;
     animation: round1 60s linear infinite;
     z-index: 1;
 }
@@ -401,7 +462,7 @@ span {
     left: 50%;
     transform: translateX(-50%);
     content: "Design | Develop | Conquer";
-    color: rgb(91, 37, 112);
+    color: rgb(36, 36, 46);
     font-size: 20px;
     font-weight: 100;
     font-family: "Roboto", sans-serif;
@@ -410,7 +471,7 @@ span {
 
 .intro2 h1 {
     position: relative;
-    color: white;
+    color: rgb(69, 69, 102);
     font-weight: 700;
     font-size: 70px;
     font-family: 'Montserrat', sans-serif;
