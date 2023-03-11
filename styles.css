@@ -462,7 +462,7 @@ span {
     left: 50%;
     transform: translateX(-50%);
     content: "Design | Develop | Conquer";
-    color: rgb(36, 36, 46);
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 100;
     font-family: "Roboto", sans-serif;
