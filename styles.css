@@ -79,7 +79,7 @@ span {
 
 .dark-mode {
   position: absolute;
-  opacity: 1;
+  opacity: 0.6;
   transition: opacity 1s;
  
 }
@@ -101,7 +101,7 @@ span {
 
 .lightsOff{
   right: 50%;
-  opacity: 1;
+  opacity: 0.6;
   transform: translateX(50%);
   transition: opacity 1s;
 }
@@ -1113,9 +1113,17 @@ span {
 }
 
 .night-mode {
+  width: 50px;
+  height: 50px;
   top: 50px;
-  left: 20px;
+  left: 25px;
 }
+
+.dark-mode i, .light-mode i {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
 
   .logo {
     display: none;
@@ -1124,8 +1132,8 @@ span {
   .round1 {
     width: 70%;
     height: 40%;
-    left: 60px;
-    bottom: 420px;
+    left: 65px;
+    bottom: 400px;
 }
 
   .top-intro {
@@ -1188,7 +1196,7 @@ span {
   .intro1 {
     filter: blur(0);
     position: relative;
-    top: 210px;
+    top: 235px;
     display: flex;
     align-items: center;
     justify-content: center;
