@@ -62,7 +62,7 @@ span {
     position: relative;
     background-size: 180%;
     bottom: 90px;
-    animation: headerBG 2s ease-out infinite alternate;
+    animation: headerBG 1.6s ease-out infinite alternate;
     height: 90vh;
     overflow: hidden;
     
@@ -945,8 +945,9 @@ span {
 
     .round1 {
         width: 70%;
-        height: 50%;
-        left: 70px;
+        height: 40%;
+        left: 60px;
+        bottom: 290px;
     }
 
   .top-nav.mobileScroll {
@@ -1050,7 +1051,7 @@ span {
 .header {
     position: relative;
     bottom: 180px;
-    height: 100vh;
+    height: 95vh;
     background-size: 350%;
     animation: headerBG 4s ease-in-out infinite alternate;
   /* overflow: hidden; */
@@ -1067,10 +1068,9 @@ span {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto; /* specify two rows with equal height */
-    grid-gap: 80px;
+    grid-gap: 180px;
     place-content: center;
     justify-content: center;
-    top: 20px;
   }
   
   .intro1 img.moveRight {
@@ -1108,15 +1108,21 @@ span {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 40px;
+    height: 50px;
     transform: rotateY(180deg);
 }
+
+.custom-shape-divider-bottom-1678401634 .shape-fill {
+  fill: #ffffff;
+}
+
+
 
 
   .intro1 {
     filter: blur(0);
     position: relative;
-    bottom: 100px;
+    top: 210px;
     display: flex;
     align-items: center;
     justify-content: center;
