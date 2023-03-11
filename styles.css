@@ -69,6 +69,7 @@ span {
     align-items: center;
     justify-content: center;
     background: rgba(79, 107, 230, 0.486);
+    z-index: 777;
   }
 .light-mode {
   position: absolute;
@@ -1008,7 +1009,7 @@ span {
         width: 70%;
         height: 40%;
         left: 60px;
-        bottom: 290px;
+        bottom: 450px;
     }
 
   .top-nav.mobileScroll {
@@ -1112,11 +1113,15 @@ span {
 .header {
     position: relative;
     bottom: 180px;
-    height: 95vh;
+    height: 100vh;
     background-size: 350%;
     animation: headerBG 4s ease-in-out infinite alternate;
   /* overflow: hidden; */
-    
+}
+
+.night-mode {
+  top: 50px;
+  left: 20px;
 }
 
   .logo {
@@ -1132,6 +1137,7 @@ span {
     grid-gap: 180px;
     place-content: center;
     justify-content: center;
+    bottom: 100px;
   }
   
   .intro1 img.moveRight {
@@ -1187,7 +1193,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-row: 1 / 2;
     z-index: 2;
   }
   
@@ -1196,12 +1201,10 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-row: 2 / 3;
     transition: filter 30s, bottom .6s ease, font-size .6s;
   }
   
   .intro2 h1 {
-    
     color: white;
     font-weight: 800;
     font-size: 45px;
