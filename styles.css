@@ -1005,13 +1005,6 @@ span {
 /* Mobile Styles */
 @media (max-width: 600px) {
 
-    .round1 {
-        width: 70%;
-        height: 40%;
-        left: 60px;
-        bottom: 450px;
-    }
-
   .top-nav.mobileScroll {
     visibility: hidden;
     position: static;
@@ -1115,7 +1108,7 @@ span {
     bottom: 180px;
     height: 100vh;
     background-size: 350%;
-    animation: headerBG 4s ease-in-out infinite alternate;
+    animation: darkBG 1.6s ease-out infinite alternate;
   /* overflow: hidden; */
 }
 
@@ -1128,6 +1121,12 @@ span {
     display: none;
   }
   
+  .round1 {
+    width: 70%;
+    height: 40%;
+    left: 60px;
+    bottom: 420px;
+}
 
   .top-intro {
     position: relative;
@@ -1137,7 +1136,7 @@ span {
     grid-gap: 180px;
     place-content: center;
     justify-content: center;
-    bottom: 100px;
+    bottom: 80px;
   }
   
   .intro1 img.moveRight {
