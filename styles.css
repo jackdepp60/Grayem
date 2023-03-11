@@ -1106,7 +1106,7 @@ span {
 .header {
     position: relative;
     bottom: 180px;
-    height: 100vh;
+    height: 102vh;
     background-size: 350%;
     animation: darkBG 1.6s ease-out infinite alternate;
   /* overflow: hidden; */
@@ -1130,10 +1130,10 @@ span {
   }
   
   .round1 {
-    width: 70%;
-    height: 40%;
-    left: 65px;
-    bottom: 400px;
+    width: 80%;
+    height: 35%;
+    left: 38px;
+    bottom: 300px;
 }
 
   .top-intro {
@@ -1144,7 +1144,7 @@ span {
     grid-gap: 180px;
     place-content: center;
     justify-content: center;
-    bottom: 80px;
+    bottom: 20px;
   }
   
   .intro1 img.moveRight {
