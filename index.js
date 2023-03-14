@@ -55,10 +55,15 @@ document.addEventListener("click", function(event){
 
 btnPortfolio.addEventListener("click", ()=>{
   let aboutModal = document.querySelector(".about-modal");
-  aboutModal.classList.remove("modal-close");
-  aboutModal.classList.add("modal-open");
-  console.log("model opened");
-  modalContent.classList.remove("moveModal");
+      aboutModal.classList.remove("modal-close");
+      modalContent.classList.remove("moveModal");
+  setTimeout(() => {
+      aboutModal.classList.add("modal-open");
+      console.log("model opened");
+      
+  }, 200);
+
+ 
 })
 
 
