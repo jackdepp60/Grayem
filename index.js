@@ -1,5 +1,6 @@
 
-
+let modalClose = document.querySelector("body");
+let modalNext = document.querySelector(".modalNext");
 let toggleBtn = document.querySelector(".hamburger");
 let topContact = document.querySelector(".top-contact");
 let topNavUl = document.querySelector(".top-nav");
@@ -9,6 +10,7 @@ const header = document.querySelector('.header');
 const round1 = document.querySelector(".round1");
 var intro2 = document.querySelector('.intro2 h1');
 let testBtn = document.querySelector(".btn");
+let btnPortfolio = document.querySelector(".btn-contact2");
 const media = window.matchMedia('(max-width: 700px)');
 
 // testBtn.addEventListener("click", ()=>{
@@ -18,6 +20,36 @@ const media = window.matchMedia('(max-width: 700px)');
 //   sheet.insertRule(rule, sheet.cssRules.length);
 //   console.log("button")
 // })
+
+// MODAL ABOUT ME
+
+
+modalNext.addEventListener("click", function(event){
+  event.stopPropagation(); // Stop the click event from propagating to the document
+  let modalContent = document.querySelector(".modal-content");
+  console.log("Navigating to next item in the list");
+ 
+    modalContent.classList.toggle("moveModal");
+  
+  // Add your code to navigate to the next item in the list
+});
+
+document.addEventListener("click", function(event){
+    if(event.target !== btnPortfolio){
+      let aboutModal = document.querySelector(".about-modal");
+      aboutModal.classList.add("modal-close");
+      aboutModal.classList.remove("modal-open");
+        console.log("modal closed");
+}
+})
+
+
+btnPortfolio.addEventListener("click", ()=>{
+  let aboutModal = document.querySelector(".about-modal");
+  aboutModal.classList.remove("modal-close");
+  aboutModal.classList.add("modal-open");
+  console.log("model opened");
+})
 
 
 // DARK MODE
@@ -30,7 +62,6 @@ lightMode.addEventListener("click", ()=>{
     darkMode.classList.toggle("lightsOn"); 
     header.style.animationName = "darkBG";
     round1.style.opacity = "0.7";
-    intro2.style.color = "rgb(69, 69, 102)"; 
 })
 
 darkMode.addEventListener("click", ()=>{

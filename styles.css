@@ -70,6 +70,7 @@ span {
     justify-content: center;
     background: rgba(79, 107, 230, 0.486);
     z-index: 777;
+    cursor: pointer;
   }
 .light-mode {
   position: absolute;
@@ -242,8 +243,8 @@ span {
 }
 
 .nav-item a:hover {
-    border-color: #4671ff;
-    color: #859dec;
+    border-color: #f8dce1;
+    color: #f8dce1;
     transition: .5s ease;
     
 }
@@ -267,7 +268,7 @@ span {
     padding: 15px 35px;
     text-align: center;
     font-size: 18px;
-    border: 2px solid #4671ff;
+    border: 2px solid #17afa3;
     border-radius: 2px;
     color: white;
     font-weight: 600;
@@ -278,7 +279,7 @@ span {
 }
 
 .btn:hover {
-    box-shadow: inset 0px 1px 1px 30px #4671ff;
+    box-shadow: inset 0px 1px 1px 30px #17afa3;
     
 }
 
@@ -472,7 +473,7 @@ span {
 
 .intro2 h1 {
     position: relative;
-    color: rgb(69, 69, 102);
+    color: #ffffff;
     font-weight: 700;
     font-size: 70px;
     font-family: 'Montserrat', sans-serif;
@@ -548,7 +549,7 @@ span {
   }
 
   .portfolio2 {
-    /* overflow: hidden; */
+    position: relative;
     background:rgba(240, 240, 239, 0.432);
     display: flex;
     flex-direction: column;
@@ -1015,7 +1016,7 @@ span {
 
   .nav-item a:hover {
     color: rgb(231, 230, 230);
-    border-color: rgb(255, 226, 61);
+    border-color: rgb(231, 230, 230);
   }
 
     .nav-item {
@@ -1031,6 +1032,7 @@ span {
 
     .btn {
         margin-top: 10px;
+        border-color: #17afa3 !important;
     }
 
   .top-nav {
@@ -1115,7 +1117,7 @@ span {
 .night-mode {
   width: 50px;
   height: 50px;
-  top: 62px;
+  top: 650px;
   left: 25px;
 }
 
@@ -1175,7 +1177,7 @@ span {
 }
 
 .custom-shape-divider-bottom-1678401634 {
-    width: 110%;
+    width: 150%;
 }
 
 .custom-shape-divider-bottom-1678401634 svg {
@@ -1232,15 +1234,12 @@ span {
     max-width: 75%;
     transition: bottom .8s ease-out, right .4s, filter .6s ease;
 }
-.btn {
-   border-radius: 30px;
-   border-color: #21b2cc !important;
-}
+
 .btn:hover {
-    box-shadow: inset 0px 1px 1px 30px #21b2cc;
+    box-shadow: inset 0px 1px 1px 30px #17afa3;
 }
 .btn:focus {
-    box-shadow: inset 0px 1px 1px 30px #21b2cc;
+    box-shadow: inset 0px 1px 1px 30px #17afa3;
 }
 /* .left-slogan {
     display: flex; 
@@ -1364,11 +1363,73 @@ span {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 0;
-    z-index: 888;
+    z-index: 777;
   }
 
   .service-text {
     text-align: center;
     padding: 0 5%;
   }
+}
+
+/* ABOUT ME MODAL */
+
+.about-modal {
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  height: 400px;
+  left: 50%;
+  opacity: 0;
+  border-radius: 5px;
+  padding: 0 20px;
+  transform: translateX(-50%);
+  background: rgb(240, 239, 238);
+  border: 2px solid red;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 0.8s;
+  overflow: hidden;
+}
+
+
+.modal-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+  
+.modal-close {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.modalNext {
+  background:rgb(98, 109, 155);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  position: relative;
+  top: 10px;
+  left: 200px;
+  width: 20%;
+  cursor: pointer;
+}
+.modalNext i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.modal-content {
+  position: relative;
+  
+
+}
+
+.modal-content.moveModal {
+  left: 100px;
+  /* opacity: 0.5; */
 }
