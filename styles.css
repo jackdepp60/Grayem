@@ -1161,8 +1161,8 @@ span {
     position: relative;
     bottom: 180px;
     height: 102vh;
-    background-size: 350%;
-    animation: darkBG 1.6s ease-out infinite alternate;
+    background-size: 200%;
+    animation: darkBG 1.2s ease-out infinite alternate;
   /* overflow: hidden; */
 }
 
