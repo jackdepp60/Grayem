@@ -1173,8 +1173,8 @@ span {
 .night-mode {
   width: 50px;
   height: 50px;
-  top: 650px;
-  left: 25px;
+  top: 540px;
+  left: 300px;
 }
 
 .dark-mode i, .light-mode i {
@@ -1376,7 +1376,7 @@ span {
 .card {
     margin: 20px 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     position: static;
 }
 
