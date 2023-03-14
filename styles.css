@@ -422,13 +422,14 @@ span {
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    animation: waveAnimate 2.6s ease-in infinite alternate-reverse;
 }
 
 .custom-shape-divider-bottom-1678401634 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 100px;
+    height: 140px;
     transform: rotateY(180deg);
 }
 
@@ -437,6 +438,16 @@ span {
 }
 
 
+@keyframes waveAnimate {
+    from {
+      left: 0;
+      width: 120%;
+    }
+    to {
+      left: -300px;
+      width: 200%;
+    }
+}
 
 .intro1 {
     position: relative;
@@ -473,7 +484,7 @@ span {
 
 .intro2 h1 {
     position: relative;
-    color: #ffffff;
+    color: #444444;
     font-weight: 700;
     font-size: 70px;
     font-family: 'Montserrat', sans-serif;
@@ -505,27 +516,65 @@ span {
     margin-top: -30px;
     opacity: 0;
     display: grid;
-    place-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* place-content: center; */
+    grid-auto-flow: column;
     grid-gap: 50px;
     transform: translateY(100px);
     text-align: center;
-    padding: 5% 14%;  
+    padding: 4% 14%;  
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: rgb(39, 202, 194);
+  border-radius: 50%;
+  animation: iconRadiate 1s ease-out infinite alternate-reverse;
+  /* transition: box-shadow 1s; */
+
+}
+
+@keyframes iconRadiate {
+  from {
+    box-shadow: 0 0 1px 0px rgba(243, 18, 85, 0.199);
+
+  }
+  to{
+    box-shadow: 0 0 1px 25px rgba(243, 89, 18, 0.041);
+  }
+}
+
+.check-icon svg {
+  width: 50px;
+  height: 50px;
+  stroke:rgb(255, 255, 255);
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .slogan-text {
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.5px;
     line-height: 1.5;
     letter-spacing: 1px;
+    color: rgb(22, 22, 22);
 }
 
 .icons p {
     font-family: 'Poppins', sans-serif;
-    color: rgb(61, 61, 61);
+    color: rgb(88, 88, 88);
     font-weight: 300;
     line-height: 1.6;
     text-align: center;
+    margin: 0;
 }
 
 
@@ -617,7 +666,9 @@ span {
     border-radius: 30px;
     color: white;
     font-weight: 600;
-    background-image: linear-gradient(295deg, #4671ff 15%, #a967ff 100%);
+    background-image: linear-gradient(290deg, #6454f0 20%, #cb68f1 80%);
+    background-size: 180%;
+    background-position: 100%;
     margin-top: 20px;
     box-sizing: border-box;
     cursor: pointer;
@@ -625,7 +676,7 @@ span {
 }
 
 .btn-contact2:hover {
-    background-image: linear-gradient(1deg, #4671ff 15%, #9380ff 100%);
+   background-position: 20%;
 }
 
 
@@ -1061,7 +1112,7 @@ span {
     text-align: center;
     z-index: 555;
     top: 140px;
-    transition: all .5s ease;
+    transition: all .5s ease-in-out;
 }
 
   .left-nav, .right-nav {
@@ -1194,6 +1245,16 @@ span {
 
 
 
+@keyframes waveAnimate {
+  from {
+    left: 0;
+    width: 120%;
+  }
+  to {
+    left: -100px;
+    width: 400%;
+  }
+}
 
   .intro1 {
     filter: blur(0);
@@ -1266,6 +1327,7 @@ span {
     padding: 5% 12% 15% 12%;
     margin-top: -100px;
 }
+
 
 .icons p {
     text-align:justify ;
@@ -1375,36 +1437,55 @@ span {
 /* ABOUT ME MODAL */
 
 .about-modal {
+  display: none;
   position: absolute;
   bottom: 20px;
   width: 300px;
   height: 400px;
   left: 50%;
   opacity: 0;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 0 20px;
   transform: translateX(-50%);
-  background: rgb(240, 239, 238);
-  border: 2px solid red;
+  background: rgb(92, 122, 255);
   z-index: 999;
   cursor: pointer;
-  transition: opacity 0.8s;
   overflow: hidden;
 }
 
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content h2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  bottom: 20px;
+}
+
+.modal-content img {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: top .5s ease-in-out, transform .8s ease-in-out;
+}
 
 .modal-open {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   opacity: 1;
-  transition: opacity 0.8s ease-in-out;
+  /* transition: opacity 0.8s ease-in-out; */
 }
   
 .modal-close {
   display: none;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  /* transition: opacity 0.8s ease-in-out; */
 }
 
 .modalNext {
@@ -1414,22 +1495,22 @@ span {
   padding: 10px 0;
   position: relative;
   top: 10px;
-  left: 200px;
+  /* left: 50%;
+  transform: translateX(-50%); */
   width: 20%;
   cursor: pointer;
 }
+
 .modalNext i {
   font-size: 1.5rem;
   color: white;
 }
 
-.modal-content {
-  position: relative;
-  
 
-}
 
-.modal-content.moveModal {
-  left: 100px;
-  /* opacity: 0.5; */
+.modal-content img.moveModal {
+  top: -20px;
+  transform: scale(1.04);
+  transition: top .5s ease-in-out, transform .8s ease-in-out;
+
 }

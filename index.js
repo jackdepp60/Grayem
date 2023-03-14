@@ -1,5 +1,6 @@
 
 let modalClose = document.querySelector("body");
+let modalContent = document.querySelector(".modal-content img");
 let modalNext = document.querySelector(".modalNext");
 let toggleBtn = document.querySelector(".hamburger");
 let topContact = document.querySelector(".top-contact");
@@ -22,12 +23,18 @@ const media = window.matchMedia('(max-width: 700px)');
 // })
 
 // MODAL ABOUT ME
+// modalContent.addEventListener("click", function() {
+//   let modalTest = document.querySelector(".modal-close");
+//   modalTest.classList.remove("moveModal");
+// });
 
+document.querySelector(".about-modal").addEventListener("click", function(event){
+  event.stopPropagation();
+} )
 
 modalNext.addEventListener("click", function(event){
   event.stopPropagation(); // Stop the click event from propagating to the document
-  let modalContent = document.querySelector(".modal-content");
-  console.log("Navigating to next item in the list");
+  console.log(modalContent);
  
     modalContent.classList.toggle("moveModal");
   
@@ -37,9 +44,11 @@ modalNext.addEventListener("click", function(event){
 document.addEventListener("click", function(event){
     if(event.target !== btnPortfolio){
       let aboutModal = document.querySelector(".about-modal");
+      modalContent.classList.remove("moveModal")
       aboutModal.classList.add("modal-close");
       aboutModal.classList.remove("modal-open");
         console.log("modal closed");
+        modalContent.classList.remove("moveModal");
 }
 })
 
@@ -49,6 +58,7 @@ btnPortfolio.addEventListener("click", ()=>{
   aboutModal.classList.remove("modal-close");
   aboutModal.classList.add("modal-open");
   console.log("model opened");
+  modalContent.classList.remove("moveModal");
 })
 
 
