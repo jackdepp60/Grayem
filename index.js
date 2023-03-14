@@ -174,7 +174,7 @@ const hiddenElements = document.querySelectorAll(".slogan-icon");
 // SCROLL CHANGE NAV BG
 
 window.addEventListener('scroll', function() {
-  let scrollItems = document.querySelectorAll("a");
+  let scrollItems = document.querySelectorAll("a:not(.footer-link)");
   let btn = document.querySelector(".btn");
   let topNav = document.querySelector(".top-nav");
   let logo = document.querySelector(".logo");
