@@ -879,6 +879,10 @@ span {
   .card-body2 {
     height: 360px;
   }
+  
+  .item2 {
+      padding-bottom: 70px;
+  }
 
   .item2 img {
     height: 220px;
