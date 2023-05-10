@@ -1180,7 +1180,7 @@ span {
   }
 
   .footer-logo {
-    color: white;
+    color: white !important;
     font-size: 1.5rem;
     font-weight: bold;
   }
